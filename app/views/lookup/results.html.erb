@@ -1,0 +1,17 @@
+<div class="center-it">
+
+<h1>Search Results</h1>
+</div>
+
+
+<br>
+<ul>
+	<% @results.each do |result| %>
+		<li><%= "#{result.first_name} #{result.last_name}, #{result.business_name}" %> <br>
+			<%="#{result.address}; #{result.city}, #{result.state}, #{result.zip}" %> <br>
+			<%= "#{result.email}, #{result.phone1} / #{result.phone2}" %>
+		</li>
+		<br>
+	<% end %>
+
+</ul>

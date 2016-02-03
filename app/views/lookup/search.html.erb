@@ -1,0 +1,36 @@
+<style>
+.center-it { text-align: center}
+</style>
+
+<div class="center-it">
+	<h1><u>Look Up a Contact </u></h1>
+
+	<%= form_tag(results_path) do %>
+		<div class="form-group">
+			<%= text_field_tag :name, nil, placeholder: "By First & Last Name", class: "form control" %>
+		<!-- </div>
+		<div class="form-group"> -->
+			<%= submit_tag "Search", class: "btn btn-default" %>
+		</div>
+		<% end %>
+
+
+<%= form_tag(results_path) do %>
+	<div class="form-group">
+		<%=text_field_tag :business_name, nil, placeholder: "By Business or Position", class: "form control" %>
+		<%= submit_tag "Search", class: "btn btn-default" %>
+		</div>
+
+<% end %>
+
+<%= form_tag(results_path) do %>
+	<div class="form-group">
+		<%=text_field_tag :city, nil, placeholder: "By City", class: "form control" %>
+		<%= submit_tag "Search", class: "btn btn-default" %>
+		</div>
+	</div>
+<% end %>
+
+
+	</div>
+

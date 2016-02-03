@@ -1,0 +1,63 @@
+<%= form_for(@contact) do |f| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% @contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :first_name, placeholder: "First Name" %>
+<!--   </div>
+  <div class="field"> -->
+    <%= f.text_field :last_name, placeholder: "Last Name" %>
+  </div>
+
+  <br>
+  <div class="field">
+    <%= f.text_field :business_name, placeholder: "Business or Position" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.text_field :address, placeholder: "Street Address" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :city, placeholder: "City" %>
+<!--   </div>
+  <div class="field"> -->
+    <%= f.text_field :state, placeholder: "State" %>
+ <!--  </div>
+  <div class="field"> -->
+    <%= f.text_field :zip, placeholder: "Zip Code" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.text_field :phone1, placeholder: "Primary Phone #" %>
+<!--   </div>
+  <div class="field"> -->
+    <%= f.text_field :phone2, placeholder: "Secondary Phone #" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.text_field :email, placeholder: "Email Address" %>
+  </div>
+  <br>
+  <div class="field">
+    <strong> Upload Image: </strong>
+    <%= f.file_field :avatar %>
+  </div>
+<br>
+<br>
+  <div>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
