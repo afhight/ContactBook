@@ -1,39 +1,41 @@
 <p id="notice"><%= notice %></p>
 
-<div class="center-it">
-  <p>
-  <%= image_tag @contact.avatar.thumb.url, alt: "contact pic" %>
-  </p>
+<div class="sm-container" >
+  <!-- <div class ="center-it"> -->
+    <p>
+    <%= image_tag @contact.avatar.thumb.url, alt: "contact pic" %>
+    </p>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @contact.first_name %> <%= @contact.last_name %>
-  </p>
-
-
-  <p>
-    <strong>Business or Position:</strong>
-    <%= @contact.business_name %>
-  </p>
+    <p>
+      <strong>Name:</strong>
+      <%= @contact.first_name %> <%= @contact.last_name %>
+    </p>
 
 
-  <p>
-    <strong>Address:</strong>
-    <%= @contact.address %> <br>
-    <%= @contact.city %>, <%= @contact.state %> <%= @contact.zip %>
-  </p>
+    <p>
+      <strong>Business or Position:</strong>
+      <%= @contact.business_name %>
+    </p>
+
+
+    <p>
+      <strong>Address:</strong>
+      <%= @contact.address %> <br>
+      <%= @contact.city %>, <%= @contact.state %> <%= @contact.zip %>
+    </p>
 
 
 
-  <p>
-    <strong>Primary / Secondary Phones:</strong>
-    <%= @contact.phone1 %> / <%= @contact.phone2 %>
-  </p>
+    <p>
+      <strong>Primary / Secondary Phones:</strong>
+      <%= @contact.phone1 %> / <%= @contact.phone2 %>
+    </p>
 
 
-  <p>
-    <strong>Email:</strong>
-    <%= @contact.email %>
-  </p>
-</div>
+    <p>
+      <strong>Email:</strong>
+      <%= @contact.email %>
+    </p>
+  </div>
+<!-- </div> -->
 
